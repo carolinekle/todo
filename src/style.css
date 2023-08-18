@@ -1,3 +1,55 @@
-.hello {
-    color: red;
-  }
+body{
+	display: flex;
+    font-family: Helvetica, sans-serif;
+    height: -webkit-fill-available;
+    width: 100vw;
+    overflow: scroll;
+    overflow-x: hidden;
+    margin:0px;
+    background-color: whitesmoke;
+    max-width:100%;
+    flex-direction: column;
+}
+.nav{
+	display:flex;
+	background-color: darkgreen;
+	color: white;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-content: center;
+}
+
+h4{
+	padding-left: 1rem;
+}
+
+.main{
+	height: 100vh;
+	width: 100vw;
+	background-color: whitesmoke;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	margin: auto;
+}
+
+.project{
+	height: 200px;
+	width:250px;
+	background-color: darkblue;
+	margin:1rem 1rem 1rem 1rem;
+}
+
+.task{
+	height:100px;
+	width:250px;
+	background-color: darkblue;
+	margin:1rem 1rem 1rem 1rem;
+}
+
+.note{
+	height: 200px;
+	width:250px;
+	background-color: lightblue;
+	margin:1rem 1rem 1rem 1rem;
+}

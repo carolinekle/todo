@@ -1,5 +1,4 @@
-import _ from 'lodash';
-import printMe from './print.js';
+import printMe from './site.js';
 import './style.css';
 
 
@@ -7,7 +6,7 @@ import './style.css';
    const element = document.createElement('div');
   const btn = document.createElement('button');
 
-   element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+   element.innerHTML = "hello webpack";
    element.classList.add('hello');
 
   btn.innerHTML = 'Click me and check the console!';
