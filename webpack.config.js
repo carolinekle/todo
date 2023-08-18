@@ -1,27 +1,39 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-module.exports = {
+ module.exports = {
   mode: 'development',
   entry: {
     index: './src/index.js',
-    print: './src/print.js',
+    site: './src/print.js',
   },
   devtool: 'inline-source-map',
- devServer: {
-   static: './dist',
- },
+  devServer: {
+    static: './dist',
+  },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Development',
+      title: 'Output Management',
     }),
   ],
-  output: {
+   output: {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist'),
-    clean: true,
+     path: path.resolve(__dirname, 'dist'),
+     clean: true,
+   },
+   module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
+      },
+    ],
   },
- optimization: {
-   runtimeChunk: 'single',
- },
-};
+   optimization: {
+    runtimeChunk: 'single',
+  },
+ };
