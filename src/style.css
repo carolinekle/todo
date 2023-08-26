@@ -5,8 +5,9 @@ body {
 	display: flex;
 	flex-direction: column;
 	background-color:#fefae0;
-}
   
+}
+
 .header {
 	height: 72px;
 	background: darkmagenta;
@@ -34,15 +35,15 @@ body {
 }
 
 .body {
-flex: 1;
-display: flex;
+	flex: 1;
+	display: flex;
 }
 
 ul {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
-	}
+}
 
 li {
 	margin-bottom: 16px;
@@ -56,9 +57,9 @@ a {
 	color: black;
 	text-decoration: none;
 	font-size: 24px;
-}
+	}
 
-.container {
+	.container {
 	padding: 32px;
 	display: flex;
 	flex-wrap: wrap;
@@ -105,22 +106,75 @@ a {
 
 }
 
-.modal > nav {
+.modal-header{
 	display: flex;
 	justify-content: space-between;
 	padding:.5rem;
 	background-color: #F5F1D8;
 	height:2.5rem;
 	align-items: center;
+	border-radius:6px;
 
 }
-
-.modal-container{
+.modal-main{
 	display: flex;
-	justify-content:space-between;
-	padding:.5rem;
+	flex: 1;
 }
 
-.modal >footer{
-	justify-self: flex-end;
+.modal-nav{
+	justify-content: space-evenly;
+	width: 10rem;
+	flex-shrink: 0;
+	padding: 1rem;
+	border-right: 1px solid black;
+	flex-wrap: nowrap;
+}
+
+.modal-nav > * {
+	margin-bottom: 10px;
+	margin-top: 10px;
+	font-size: 13px;
+}
+
+select{
+	background-color: transparent;
+	appearance: none;
+	padding:5px;
+	border:1px solid black;
+	font-family:inherit;
+	width:50%;
+
+}
+
+.titleInput{
+	background-color: whitesmoke;
+	border: none;
+	padding: 3px;
+	border-radius:5px;
+	width: 80%;
+}
+.dateInput{
+	background-color: whitesmoke;
+	border: none;
+	padding: 3px;
+	border-radius:5px;
+	width: 60%;
+}
+
+.modal-content{
+padding: 1rem;
+width: 90%;
+display: flex;
+flex-wrap: wrap;
+}
+
+.submit{
+	background-color: transparent;
+	border: 1px solid black;
+	border-radius:3px;
+	cursor: pointer;
+}
+
+.submit:active{
+	background-color: #c48f54;
 }
